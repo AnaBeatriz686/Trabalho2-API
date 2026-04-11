@@ -1,7 +1,16 @@
+/**
+ * API CRUD para gerenciamento de jogos.
+ */
+
 const express = require('express');
 const app = express();
 
 app.use(express.json());
+
+/**
+ * Banco de Dados em memória armazenando as informações dos jogos. 
+ * Cada jogo possui um ID único, nome, preço, categoria e ano de lançamento.
+ */
 
 let jogos = [
     { id: 1, nome: "Resident Evil: Requiem", preco: 160, categoria: "Terror", ano: 2026},
@@ -17,15 +26,29 @@ let jogos = [
 ];
 let proximoId = 11;
 
+/**
+ * Endpoint GET para listar todos os jogos.
+ */
+
 app.get('/api/jogos', (req, res) => {
     res.json(jogos);
 });
+
+/**
+ * Endpoint GET para obter um jogo específico por ID. 
+ * Retorna 404 se o jogo não for encontrado.
+ */
 
 app.get('/api/jogos/:id', (req, res) => {
     const jogo = jogos.find(p => p.id === parseInt(req.params.id));
     if (!jogo) return res.status(404).json({ erro: "Não encontrado" });
     res.json(jogo);
 });
+
+/**
+ * Endpoint POST para criar um novo jogo.
+ * Valida os campos obrigatórios e retorna 400 em caso de erro.
+ */
 
 app.post('/api/jogos', (req, res) => {
     const { nome, preco, categoria, ano } = req.body;
@@ -55,6 +78,12 @@ app.post('/api/jogos', (req, res) => {
     jogos.push(novoJogo);
     res.status(201).json(novoJogo);
 });
+
+/**
+ * Endpoint PUT para atualizar um jogo existente por ID.
+ * Valida os campos obrigatórios e retorna 400 em caso de erro.
+ * Retorna 404 se o jogo não for encontrado.
+ */
 
 app.put('/api/jogos/:id', (req, res) => {
     const jogo = jogos.find(p => p.id === parseInt(req.params.id));
@@ -89,6 +118,11 @@ app.put('/api/jogos/:id', (req, res) => {
     res.json(jogo);
 });
 
+/**
+ * Endpoint DELETE para remover um jogo por ID. 
+ * Retorna 404 se o jogo não for encontrado.
+ */
+
 app.delete('/api/jogos/:id', (req, res) => {
     const index = jogos.findIndex(p => p.id === parseInt(req.params.id));
     if (index === -1) return res.status(404).json({ erro: "Não encontrado" });
@@ -96,6 +130,10 @@ app.delete('/api/jogos/:id', (req, res) => {
     jogos.splice(index, 1);
     res.status(204).send();
 });
+
+/**
+ * Inicia o servidor na porta 3000 e exibe uma mensagem de confirmação no console.
+ */
 
 app.listen(3000, () => {
     console.log('API CRUD completa na porta 3000');
