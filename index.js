@@ -54,6 +54,14 @@ app.put('/api/jogos/:id', (req, res) => {
     res.json(jogo);
 });
 
+app.delete('/api/jogos/:id', (req, res) => {
+    const index = jogos.findIndex(p => p.id === parseInt(req.params.id));
+    if (index === -1) return res.status(404).json({ erro: "Não encontrado" });
+    
+    jogos.splice(index, 1);
+    res.status(204).send();
+});
+
 app.listen(3000, () => {
     console.log('API CRUD completa na porta 3000');
 });
