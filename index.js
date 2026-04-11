@@ -21,6 +21,12 @@ app.get('/api/jogos', (req, res) => {
     res.json(jogos);
 });
 
+app.get('/api/jogos/:id', (req, res) => {
+    const jogo = jogos.find(p => p.id === parseInt(req.params.id));
+    if (!jogo) return res.status(404).json({ erro: "Não encontrado" });
+    res.json(jogo);
+});
+
 app.listen(3000, () => {
     console.log('API CRUD completa na porta 3000');
 });
