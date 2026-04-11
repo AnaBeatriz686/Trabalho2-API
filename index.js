@@ -39,6 +39,21 @@ app.post('/api/jogos', (req, res) => {
     res.status(201).json(novoJogo);
 });
 
+app.put('/api/jogos/:id', (req, res) => {
+    const jogo = jogos.find(p => p.id === parseInt(req.params.id));
+    if (!jogo) return res.status(404).json({ erro: "Não encontrado" });
+    
+    const { nome, preco, categoria } = req.body;
+    if (!nome || !preco || !categoria) {
+        return res.status(400).json({ erro: "Campos obrigatórios faltando" });
+    }
+    
+    jogo.nome = nome;
+    jogo.preco = preco;
+    jogo.categoria = categoria;
+    res.json(jogo);
+});
+
 app.listen(3000, () => {
     console.log('API CRUD completa na porta 3000');
 });
