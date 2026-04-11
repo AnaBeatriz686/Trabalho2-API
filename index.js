@@ -28,13 +28,30 @@ app.get('/api/jogos/:id', (req, res) => {
 });
 
 app.post('/api/jogos', (req, res) => {
-    const { nome, preco, categoria } = req.body;
+    const { nome, preco, categoria, ano } = req.body;
     
-    if (!nome || !preco || !categoria) {
+    if (!nome || !preco || !categoria || !ano) {
         return res.status(400).json({ erro: "Campos obrigatórios faltando" });
     }
+
+    if (typeof nome !== 'string' || nome.trim() === '') {
+        return res.status(400).json({ erro: "Nome deve ser um texto" });
+    }
+
+    if (typeof preco !== 'number' || preco <= 0) {
+        return res.status(400).json({ erro: "Preço deve ser um número positivo" });
+    }
+
+    if (typeof ano !== 'number' || ano < 1950 || ano > new Date().getFullYear()) {
+        return res.status(400).json({ erro: "Ano inválido" });
+    }
+
+    const categoriasValidas = ["Ação", "RPG", "Terror", "Simulação"];
+    if (!categoriasValidas.includes(categoria)) {
+        return res.status(400).json({ erro: "Categoria inválida" });
+    }
     
-    const novoJogo = { id: proximoId++, nome, preco, categoria };
+    const novoJogo = { id: proximoId++, nome, preco, categoria, ano };
     jogos.push(novoJogo);
     res.status(201).json(novoJogo);
 });
