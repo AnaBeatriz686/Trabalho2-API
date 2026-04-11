@@ -27,6 +27,18 @@ app.get('/api/jogos/:id', (req, res) => {
     res.json(jogo);
 });
 
+app.post('/api/jogos', (req, res) => {
+    const { nome, preco, categoria } = req.body;
+    
+    if (!nome || !preco || !categoria) {
+        return res.status(400).json({ erro: "Campos obrigatórios faltando" });
+    }
+    
+    const novoJogo = { id: proximoId++, nome, preco, categoria };
+    jogos.push(novoJogo);
+    res.status(201).json(novoJogo);
+});
+
 app.listen(3000, () => {
     console.log('API CRUD completa na porta 3000');
 });
