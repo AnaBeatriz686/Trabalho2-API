@@ -60,14 +60,32 @@ app.put('/api/jogos/:id', (req, res) => {
     const jogo = jogos.find(p => p.id === parseInt(req.params.id));
     if (!jogo) return res.status(404).json({ erro: "Não encontrado" });
     
-    const { nome, preco, categoria } = req.body;
-    if (!nome || !preco || !categoria) {
+    const { nome, preco, categoria, ano } = req.body;
+    if (!nome || preco === undefined || !categoria || !ano) {
         return res.status(400).json({ erro: "Campos obrigatórios faltando" });
     }
-    
+
+    if (typeof nome !== 'string' || nome.trim() === '') {
+        return res.status(400).json({ erro: "Nome deve ser um texto" });
+    }
+
+    if (typeof preco !== 'number' || preco <= 0) {
+        return res.status(400).json({ erro: "Preço deve ser um número positivo" });
+    }
+
+    if (typeof ano !== 'number' || ano < 1950 || ano > new Date().getFullYear()) {
+        return res.status(400).json({ erro: "Ano inválido" });
+    }
+
+    const categoriasValidas = ["Ação", "RPG", "Terror", "Simulação"];
+    if (!categoriasValidas.includes(categoria)) {
+        return res.status(400).json({ erro: "Categoria inválida" });
+    }
+
     jogo.nome = nome;
     jogo.preco = preco;
     jogo.categoria = categoria;
+    jogo.ano = ano;
     res.json(jogo);
 });
 
