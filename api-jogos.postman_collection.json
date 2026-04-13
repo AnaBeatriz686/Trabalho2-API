@@ -1,0 +1,1447 @@
+{
+  "info": {
+    "_postman_id": "5b748771-718f-4e14-b81a-424f4a481c6b",
+    "name": "api-jogos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52842560",
+    "_collection_link": "https://go.postman.co/collection/52842560-5b748771-718f-4e14-b81a-424f4a481c6b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "jogos",
+      "item": [
+        {
+          "name": "GET - listar jogos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - listar jogos",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "804"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"324-pmstoB1MYOW8NQ6x0ru0b3i57+c\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 01:58:43 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Resident Evil: Requiem\",\n        \"preco\": 160,\n        \"categoria\": \"Terror\",\n        \"ano\": 2026\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Hades\",\n        \"preco\": 74,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"The Last of Us Part I\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2023\n    },\n    {\n        \"id\": 4,\n        \"nome\": \"Marvel's Spider-Man Remastered\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 5,\n        \"nome\": \"God of War Ragnarök\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2024\n    },\n    {\n        \"id\": 6,\n        \"nome\": \"Elden Ring\",\n        \"preco\": 270,\n        \"categoria\": \"RPG\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 7,\n        \"nome\": \"Hollow Knight\",\n        \"preco\": 60,\n        \"categoria\": \"Ação\",\n        \"ano\": 2017\n    },\n    {\n        \"id\": 8,\n        \"nome\": \"Cyberpunk 2077\",\n        \"preco\": 200,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 9,\n        \"nome\": \"Red Dead Redemption 2\",\n        \"preco\": 300,\n        \"categoria\": \"Ação\",\n        \"ano\": 2019\n    },\n    {\n        \"id\": 10,\n        \"nome\": \"The Farmer Was Replaced\",\n        \"preco\": 30,\n        \"categoria\": \"Simulação\",\n        \"ano\": 2025\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "GET - jogo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - jogo por ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "82"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"52-KFCxaTlXzNsG61y7UWiFRQsAsuY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:01:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"nome\": \"God of War Ragnarök\",\n    \"preco\": 250,\n    \"categoria\": \"Ação\",\n    \"ano\": 2024\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET - jogo por ID errado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "20"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - jogo por ID errado",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/20",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "20"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-7lfTHokOaJOwNOhPL3MGOPS0GqA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:03:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Não encontrado\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"GTA VI\",\r\n  \"preco\": 350,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2026\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"GTA VI\",\r\n  \"preco\": 350,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2026\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-UwYpqPJ8Tn6b3kT/Xs3lRtaHcmw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:52:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 11,\n    \"nome\": \"GTA VI\",\n    \"preco\": 350,\n    \"categoria\": \"Ação\",\n    \"ano\": 2026\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo com campos faltando",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Erro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo com campos faltando",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"Erro\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "40"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"28-Moxh8VaD701M23jxFgHbTdfOac8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:18:26 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Campos obrigatórios faltando\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo com preço inválido",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Spider-Man: Miles Morales\",\r\n  \"preco\": -10,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2020\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo com preço inválido",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"Spider-Man: Miles Morales\",\r\n  \"preco\": -10,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2020\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "46"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2e-PVvJ8VV1RNYKM9lt/X3r/aid9EI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:28:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Preço deve ser um número positivo\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo com categoria inválida",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"DOOM Eternal\",\r\n  \"preco\": 150,\r\n  \"categoria\": \"FPS\",\r\n  \"ano\": 2020\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo com categoria inválida",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"DOOM Eternal\",\r\n  \"preco\": 150,\r\n  \"categoria\": \"FPS\",\r\n  \"ano\": 2020\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "30"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1e-/BPiDHeqK5niUFz9LeDKzo63nFw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:32:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Categoria inválida\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo com nome vazio",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"\",\r\n  \"preco\": 100,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2024\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo com nome vazio",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"\",\r\n  \"preco\": 100,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2024\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "33"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"21-vTVYCKPHKb1RukwPx9s1Dz0QejI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:35:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Nome deve ser um texto\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST - criar jogo com ano inválido",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"GTA VI\",\r\n  \"preco\": 400,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2027\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: POST - criar jogo com ano inválido",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"GTA VI\",\r\n  \"preco\": 400,\r\n  \"categoria\": \"Ação\",\r\n  \"ano\": 2027\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "24"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"18-5e55hl1aqPLoCBHH9tg1LbF2od4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:37:17 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Ano inválido\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT - atualizar jogo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"id\": 7,\r\n        \"nome\": \"Resident Evil 4 Remake\",\r\n        \"preco\": 160,\r\n        \"categoria\": \"Terror\",\r\n        \"ano\": 2023\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "7"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: PUT - atualizar jogo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"id\": 7,\r\n        \"nome\": \"Resident Evil 4 Remake\",\r\n        \"preco\": 160,\r\n        \"categoria\": \"Terror\",\r\n        \"ano\": 2023\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/7",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "7"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "84"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"54-77HGMMxcUSI/kSC/nybv3S8PEKA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:43:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 7,\n    \"nome\": \"Resident Evil 4 Remake\",\n    \"preco\": 160,\n    \"categoria\": \"Terror\",\n    \"ano\": 2023\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT - atualizar jogo com ID errado",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"id\": 7,\r\n        \"nome\": \"Resident Evil 4 Remake\",\r\n        \"preco\": 160,\r\n        \"categoria\": \"Terror\",\r\n        \"ano\": 2023\r\n    }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "20"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: PUT - atualizar jogo com ID errado",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"id\": 7,\r\n        \"nome\": \"Resident Evil 4 Remake\",\r\n        \"preco\": 160,\r\n        \"categoria\": \"Terror\",\r\n        \"ano\": 2023\r\n    }"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/20",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "20"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-7lfTHokOaJOwNOhPL3MGOPS0GqA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:44:34 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Não encontrado\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT - atualizar jogo com dados inválidos",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"\",\r\n  \"preco\": 0,\r\n  \"categoria\": \"Nada\",\r\n  \"ano\": 1800\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: PUT - atualizar jogo com dados inválidos",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"nome\": \"\",\r\n  \"preco\": 0,\r\n  \"categoria\": \"Nada\",\r\n  \"ano\": 1800\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "33"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"21-vTVYCKPHKb1RukwPx9s1Dz0QejI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:45:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Nome deve ser um texto\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET - listar jogos atualizado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - listar jogos atualizado",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "884"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"374-JW5uKY8uxBRLRKlOstQMF/nIw9o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:52:54 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Resident Evil: Requiem\",\n        \"preco\": 160,\n        \"categoria\": \"Terror\",\n        \"ano\": 2026\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Hades\",\n        \"preco\": 74,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"The Last of Us Part I\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2023\n    },\n    {\n        \"id\": 4,\n        \"nome\": \"Marvel's Spider-Man Remastered\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 5,\n        \"nome\": \"God of War Ragnarök\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2024\n    },\n    {\n        \"id\": 6,\n        \"nome\": \"Elden Ring\",\n        \"preco\": 270,\n        \"categoria\": \"RPG\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 7,\n        \"nome\": \"Resident Evil 4 Remake\",\n        \"preco\": 160,\n        \"categoria\": \"Terror\",\n        \"ano\": 2023\n    },\n    {\n        \"id\": 8,\n        \"nome\": \"Cyberpunk 2077\",\n        \"preco\": 200,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 9,\n        \"nome\": \"Red Dead Redemption 2\",\n        \"preco\": 300,\n        \"categoria\": \"Ação\",\n        \"ano\": 2019\n    },\n    {\n        \"id\": 10,\n        \"nome\": \"The Farmer Was Replaced\",\n        \"preco\": 30,\n        \"categoria\": \"Simulação\",\n        \"ano\": 2025\n    },\n    {\n        \"id\": 11,\n        \"nome\": \"GTA VI\",\n        \"preco\": 350,\n        \"categoria\": \"Ação\",\n        \"ano\": 2026\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "DELETE - remover jogo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "11"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: DELETE - remover jogo",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/11",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "11"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:53:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "DELETE - remover jogo com ID errado",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "15"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: DELETE - remover jogo com ID errado",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/15",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "15"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-7lfTHokOaJOwNOhPL3MGOPS0GqA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:54:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Não encontrado\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET - jogo deletado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos",
+                "11"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - jogo deletado",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos/11",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos",
+                    "11"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-7lfTHokOaJOwNOhPL3MGOPS0GqA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:55:11 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"erro\": \"Não encontrado\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET - listar todos após remoção",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/jogos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "jogos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "resposta: GET - listar todos após remoção",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/jogos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "jogos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "814"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"32e-4YHP0FbXRUl6SEKTzLfGyB2VTqE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 13 Apr 2026 02:55:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Resident Evil: Requiem\",\n        \"preco\": 160,\n        \"categoria\": \"Terror\",\n        \"ano\": 2026\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Hades\",\n        \"preco\": 74,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"The Last of Us Part I\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2023\n    },\n    {\n        \"id\": 4,\n        \"nome\": \"Marvel's Spider-Man Remastered\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 5,\n        \"nome\": \"God of War Ragnarök\",\n        \"preco\": 250,\n        \"categoria\": \"Ação\",\n        \"ano\": 2024\n    },\n    {\n        \"id\": 6,\n        \"nome\": \"Elden Ring\",\n        \"preco\": 270,\n        \"categoria\": \"RPG\",\n        \"ano\": 2022\n    },\n    {\n        \"id\": 7,\n        \"nome\": \"Resident Evil 4 Remake\",\n        \"preco\": 160,\n        \"categoria\": \"Terror\",\n        \"ano\": 2023\n    },\n    {\n        \"id\": 8,\n        \"nome\": \"Cyberpunk 2077\",\n        \"preco\": 200,\n        \"categoria\": \"RPG\",\n        \"ano\": 2020\n    },\n    {\n        \"id\": 9,\n        \"nome\": \"Red Dead Redemption 2\",\n        \"preco\": 300,\n        \"categoria\": \"Ação\",\n        \"ano\": 2019\n    },\n    {\n        \"id\": 10,\n        \"nome\": \"The Farmer Was Replaced\",\n        \"preco\": 30,\n        \"categoria\": \"Simulação\",\n        \"ano\": 2025\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
