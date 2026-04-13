@@ -51,9 +51,16 @@ app.get('/api/jogos/:id', (req, res) => {
  */
 
 app.post('/api/jogos', (req, res) => {
+
     const { nome, preco, categoria, ano } = req.body;
     
-    if (!nome || !preco || !categoria || !ano) {
+    if (
+        nome === undefined ||
+        preco === undefined ||
+        categoria === undefined ||
+        ano === undefined
+    ) {
+        
         return res.status(400).json({ erro: "Campos obrigatórios faltando" });
     }
 
@@ -90,7 +97,13 @@ app.put('/api/jogos/:id', (req, res) => {
     if (!jogo) return res.status(404).json({ erro: "Não encontrado" });
     
     const { nome, preco, categoria, ano } = req.body;
-    if (!nome || preco === undefined || !categoria || !ano) {
+    
+    if (
+        nome === undefined ||
+        preco === undefined ||
+        categoria === undefined ||
+        ano === undefined
+    ) {
         return res.status(400).json({ erro: "Campos obrigatórios faltando" });
     }
 
